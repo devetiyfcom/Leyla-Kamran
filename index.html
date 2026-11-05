@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Kənan & Arzu</title>
+<meta name="description" content="Kənan və Arzunun toy dəvətnaməsi — 12.12.2026, Sarı Gəlin Şadlıq Sarayı">
+<meta property="og:title" content="Kənan & Arzu — Toy dəvətnaməsi">
+<meta property="og:description" content="12 dekabr 2026 · Sarı Gəlin Şadlıq Sarayı">
+<meta property="og:image" content="https://devetiyfcom.github.io/Kenan-Arzu/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://devetiyfcom.github.io/Kenan-Arzu/">
+<meta property="og:image:type" content="image/jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* Layout: lace envelope opens to one long burgundy-on-ivory scroll — lace hero, butterfly date, tassels, venue, wavy-line program, RSVP, farewell. Single deliberate light look. */
+:root{
+  --ivory:#f5efe8;
+  --ivory-deep:#ebe1d6;
+  --paper:#e9e4df;
+  --wine:#5e0f1e;
+  --wine-soft:#8a2a3a;
+  --gold:#b48a4a;
+  --ink:#3a2026;
+  --muted:#7d6268;
+  --script:"Pinyon Script","Great Vibes",cursive;
+  --serif:"Cormorant Garamond","Cormorant",Georgia,"Times New Roman",serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{background:var(--ivory);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.55;overflow-x:hidden;-webkit-tap-highlight-color:transparent}
+body.locked{overflow:hidden}
+img{max-width:100%;display:block}
+
+/* ---------- INTRO ---------- */
+#intro{position:fixed;inset:0;z-index:50;background:#e9dfd2 url(img/bg-clean.jpg) center/cover;display:grid;place-items:center;cursor:pointer;transition:opacity .9s ease}
+#intro.gone{opacity:0;pointer-events:none}
+.stage{position:relative;height:100%;max-height:100%;aspect-ratio:675/1200;max-width:100%;overflow:hidden;perspective:1800px;perspective-origin:50% 42.6%}
+@media (max-aspect-ratio:675/1200){.stage{width:100%;height:auto;aspect-ratio:675/1200}}
+.stage>*{position:absolute}
+.l-bg{left:0;top:0;width:100%;height:100%;object-fit:cover;max-width:none}
+.l-back{left:12%;top:42.583%;width:76.148%;height:31.167%;max-width:none}
+.l-fan{left:14.074%;top:26.167%;width:72.741%;height:16.583%;max-width:none;opacity:0;transition:opacity .3s ease}
+.l-front{left:12%;top:42.917%;width:76.148%;height:30.833%;max-width:none}
+.l-flap{left:14.074%;top:42.583%;width:72.741%;height:16.583%;max-width:none;transform-origin:50% .25%;transition:transform 1s cubic-bezier(.55,.05,.3,1),opacity .3s ease;filter:drop-shadow(0 4px 5px rgba(40,0,10,.35))}
+.l-seal{left:44.74%;top:53.83%;width:10.96%;max-width:none;filter:drop-shadow(0 2px 3px rgba(60,30,0,.35))}
+.stage.closed .l-seal{animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.09)}}
+.hint{left:0;right:0;bottom:12%;text-align:center;font-family:var(--serif);font-style:italic;color:var(--wine);font-size:clamp(16px,4.4vw,22px);letter-spacing:.04em;animation:breathe 2.4s ease-in-out infinite;transition:opacity .4s}
+@keyframes breathe{0%,100%{opacity:.55}50%{opacity:1}}
+.stage.opening .hint{opacity:0;animation:none}
+/* letter starts hidden behind the front pocket, under the seal, and slides up inside the envelope */
+.paperclip{left:0;top:0;width:100%;height:100%;clip-path:inset(0 0 27.83% 0)}
+.paper{position:absolute;left:26.81%;top:58.33%;width:46.52%;height:28.33%;background:linear-gradient(180deg,#efe9e3,#e6dfd8);box-shadow:0 0 14px rgba(60,10,20,.22);display:grid;place-items:center;transition:transform 1.5s cubic-bezier(.45,0,.25,1);will-change:transform}
+.paper span{font-family:var(--script);color:var(--wine);font-size:calc(var(--u,4px)*8.5);line-height:.95;text-align:center;opacity:0;transition:opacity .6s ease .9s}
+.paper span i{display:block;font-style:normal;font-size:.55em;color:var(--gold);line-height:1.25}
+.stage.opening .l-flap{transform:rotateX(180deg)}
+.stage.opened .l-flap{opacity:0}
+.stage.opened .l-fan{opacity:1}
+.stage.rise .paper{transform:translateY(-135.88%)}
+.stage.rise .paper span{opacity:1}
+.stage.grow .paperclip{clip-path:none;z-index:9}
+.stage.grow .paper{transform:translateY(-135.88%) scale(5.4);transition:transform .9s cubic-bezier(.6,0,.85,.45)}
+.stage.grow .paper span{opacity:0;transition:opacity .25s ease 0s}
+
+/* ---------- MAIN ---------- */
+main{position:relative;opacity:0;transition:opacity 1s ease}
+main.show{opacity:1}
+section{position:relative;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:520px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px}
+.eyebrow{font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h2{font-family:var(--script);font-weight:400;color:var(--wine);font-size:clamp(40px,11vw,58px);line-height:1.1;margin:0;text-wrap:balance}
+p{margin:0}
+.lace-bg{background:var(--ivory) url(img/bg-clean.jpg) center/640px repeat}
+.lace-bg::before{content:"";position:absolute;inset:0;background:var(--ivory);opacity:.72;pointer-events:none}
+.lace-bg>*{position:relative}
+
+/* hero */
+#hero{min-height:100svh;background:var(--ivory) url(img/lace-frame.jpg) center/cover;display:grid;place-items:center;overflow:hidden;padding-block:80px 96px}
+.hero-card{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;z-index:1;max-width:330px}
+.names{font-family:var(--script);color:var(--wine);font-size:clamp(64px,19vw,104px);line-height:.95;margin:0;font-weight:400}
+.names .amp{display:block;font-size:.45em;color:var(--gold);line-height:1.2}
+.hero-lead{font-style:italic;font-size:19px;color:var(--muted)}
+.hero-note{font-size:17px;max-width:30ch}
+.rule{width:120px;height:14px;color:var(--gold)}
+.scroll-cue{position:absolute;bottom:calc(22px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--wine-soft);display:flex;flex-direction:column;align-items:center;gap:6px;z-index:3}
+.scroll-cue svg{animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+.reveal{opacity:1;transform:none;transition:opacity 1s ease,transform 1s ease}
+.js .reveal.pre{opacity:0;transform:translateY(24px)}
+
+/* date */
+#date{padding-block:72px 24px}
+.date-box{position:relative;width:min(100%,360px);display:grid;place-items:center;min-height:360px}
+.date-hidden{width:100%;display:flex;flex-direction:column;align-items:center;gap:4px;opacity:0;transform:scale(.85);filter:blur(6px);transition:all 1.1s ease .35s}
+.cal{width:100%;background:rgba(255,255,255,.6);border:1px solid rgba(94,15,30,.22);border-radius:6px;padding:16px 14px 14px;display:flex;flex-direction:column;gap:10px}
+.cal-head{font-family:var(--script);font-size:40px;line-height:1;color:var(--wine);text-align:center}
+.cal-head b{font-weight:400;color:var(--gold)}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px 2px;text-align:center}
+.cal-grid .dow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-weight:600;padding-bottom:4px}
+.cal-grid .d{position:relative;isolation:isolate;height:38px;display:grid;place-items:center;font-size:19px;font-variant-numeric:tabular-nums;color:var(--ink)}
+.cal-grid .d.on{color:#fff;font-weight:600}
+.cal-grid .d.on::before{content:"";position:absolute;left:50%;top:50%;width:46px;height:46px;transform:translate(-50%,-52%);z-index:-1;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%235e0f1e' d='M12 21C5 16.5 2 12.8 2 9C2 6.2 4.2 4.5 6.6 4.5C8.8 4.5 10.9 5.7 12 7.6C13.1 5.7 15.2 4.5 17.4 4.5C19.8 4.5 22 6.2 22 9C22 12.8 19 16.5 12 21Z'/%3E%3C/svg%3E") center/contain no-repeat;animation:beat 1.7s ease-in-out infinite}
+@keyframes beat{0%,100%{transform:translate(-50%,-52%) scale(1)}50%{transform:translate(-50%,-52%) scale(1.12)}}
+.date-num{font-family:var(--serif);font-weight:500;color:var(--wine);font-size:clamp(46px,14vw,64px);letter-spacing:.06em;font-variant-numeric:tabular-nums;line-height:1}
+.date-num i{font-style:normal;color:var(--gold);padding:0 .12em}
+.date-day{font-style:italic;font-size:19px;color:var(--muted)}
+.bfly{position:absolute;left:50%;top:50%;width:150px;margin:-100px 0 0 -75px;cursor:pointer;border:0;background:none;padding:0;z-index:2}
+.bfly img{width:100%;transform-origin:42% 60%;animation:flutter .9s ease-in-out infinite}
+.bfly:focus-visible{outline:2px dashed var(--gold);outline-offset:6px;border-radius:12px}
+@keyframes flutter{0%,100%{transform:scaleX(1) rotate(0)}50%{transform:scaleX(.82) rotate(-3deg)}}
+.bfly.away{opacity:0;transform:scale(.6);transition:opacity .35s ease,transform .35s ease;pointer-events:none}
+.date-box.open .date-hidden{opacity:1;transform:none;filter:none}
+.tap{font-style:italic;color:var(--wine-soft);font-size:17px;transition:opacity .4s}
+.date-box.open + .tap{opacity:0}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;width:min(100%,360px);transition:opacity .8s}
+.countdown.idle{opacity:.45}
+.cd{border:1px solid rgba(94,15,30,.25);background:rgba(255,255,255,.55);border-radius:4px;padding:12px 4px 8px;display:flex;flex-direction:column;align-items:center;gap:2px}
+.cd b{font-family:var(--serif);font-weight:600;font-size:30px;color:var(--wine);font-variant-numeric:tabular-nums;line-height:1}
+.cd span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.tassels{width:min(100%,460px);margin-top:12px;transform-origin:top center;animation:swing 6s ease-in-out infinite}
+@keyframes swing{0%,100%{transform:rotate(0)}50%{transform:rotate(.8deg)}}
+
+/* venue */
+#venue{padding-block:24px 72px}
+.venue-name{font-size:26px;font-weight:600;color:var(--wine);letter-spacing:.02em;line-height:1.25}
+.venue-sub{color:var(--muted);font-style:italic}
+.btns{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-family:var(--serif);font-size:17px;font-weight:600;letter-spacing:.04em;padding:12px 22px;border-radius:999px;border:1px solid var(--wine);color:var(--wine);background:transparent;cursor:pointer;transition:background .25s,color .25s}
+.btn:hover,.btn:focus-visible{background:var(--wine);color:var(--ivory);outline:none}
+.btn.solid{background:var(--wine);color:var(--ivory)}
+.btn.solid:hover,.btn.solid:focus-visible{background:var(--wine-soft)}
+.btn svg{width:18px;height:18px}
+
+/* program */
+#program{padding-block:72px;background:#fbf1e5}
+.timeline{position:relative;width:100%;max-width:440px;margin:28px auto 0;aspect-ratio:1024/1536}
+.wave{position:absolute;inset:0;width:100%;height:100%;display:block}
+.wave-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.tl-item{position:absolute;display:flex;flex-direction:column;gap:2px;transform:translateY(-50%);opacity:.35;transition:opacity .6s}
+.tl-item.on{opacity:1}
+.tl-item.tl-left{text-align:right;align-items:flex-end;left:0}
+.tl-item.tl-right{text-align:left;align-items:flex-start;right:0}
+.tl-item b{font-family:var(--serif);font-weight:600;font-size:24px;color:var(--wine);font-variant-numeric:tabular-nums;line-height:1}
+.tl-item span{font-size:17px;line-height:1.25}
+
+/* rsvp */
+#rsvp{padding-block:0 72px;overflow:hidden}
+.rsvp-top{display:block;width:calc(100% + 32px);max-width:760px;margin:0 -16px -40px;position:relative;left:50%;transform:translateX(-50%);pointer-events:none}
+form{width:100%;max-width:400px;display:flex;flex-direction:column;gap:16px;text-align:left}
+label,.lbl{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.field{display:flex;flex-direction:column;gap:6px}
+input[type=text],select,textarea{font:inherit;font-size:17px;color:var(--ink);background:rgba(255,255,255,.7);border:1px solid rgba(94,15,30,.25);border-radius:4px;padding:11px 12px;width:100%}
+textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
+.choice{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.choice input{position:absolute;opacity:0}
+.choice label{display:block;text-align:center;text-transform:none;letter-spacing:.02em;font-size:16px;color:var(--wine);border:1px solid rgba(94,15,30,.3);border-radius:4px;padding:11px 6px;cursor:pointer;background:rgba(255,255,255,.55)}
+.choice input:checked+label{background:var(--wine);color:var(--ivory);border-color:var(--wine)}
+.choice input:focus-visible+label{outline:2px solid var(--gold)}
+.err{color:#9b1c2c;font-size:15px;min-height:1em}
+form .btn{justify-content:center}
+
+/* finale */
+#finale{padding-block:80px 40px;background:var(--wine);color:var(--ivory)}
+#finale h2{color:var(--ivory)}
+#finale p{max-width:34ch;font-size:19px;font-style:italic;color:#f1dfd9}
+.sign{font-family:var(--script);font-size:44px;color:#e9c98e}
+.insta{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;border:1px solid rgba(233,201,142,.6);color:#e9c98e;margin-top:24px}
+.insta:hover,.insta:focus-visible{background:rgba(233,201,142,.15);outline:none}
+.insta svg{width:22px;height:22px}
+.foot{padding-bottom:calc(8px + env(safe-area-inset-bottom,0px));font-size:12px;letter-spacing:.2em;color:#cfb3ad;text-transform:uppercase}
+
+/* music toggle */
+.music{position:fixed;right:calc(14px + env(safe-area-inset-right,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:45;width:44px;height:44px;border-radius:50%;border:1px solid rgba(94,15,30,.35);background:rgba(251,241,229,.92);color:var(--wine);display:none;place-items:center;cursor:pointer;padding:0;box-shadow:0 2px 10px rgba(60,10,20,.18)}
+.music.show{display:grid}
+.music:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.music svg{width:22px;height:22px}
+.music .off{display:none}
+.music.muted .on{display:none}
+.music.muted .off{display:block}
+
+/* free butterflies */
+.free{position:fixed;left:0;top:0;width:46px;z-index:40;pointer-events:none;will-change:transform}
+.free img{width:100%;animation:flutter .32s ease-in-out infinite;transform-origin:42% 60%}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.2s!important}
+}
+</style>
+</head>
+<body>
+
+<div id="intro" role="button" tabindex="0" aria-label="Zərfi açmaq üçün toxunun">
+  <div class="stage closed" id="stage">
+    <img class="l-bg" src="img/bg-clean.jpg" alt="">
+    <img class="l-back" src="img/env-back.webp" alt="">
+    <img class="l-fan" src="img/env-fan.webp" alt="">
+    <div class="paperclip"><div class="paper"><span>Kənan<i>&amp;</i>Arzu</span></div></div>
+    <img class="l-front" src="img/env-front.webp" alt="">
+    <img class="l-flap" src="img/env-flap.webp" alt="">
+    <img class="l-seal" src="img/seal.png" alt="">
+    <div class="hint">Zərfi açmaq üçün toxunun</div>
+  </div>
+</div>
+
+<audio id="bgm" src="music.mp3" loop preload="auto"></audio>
+<button class="music" id="musicBtn" type="button" aria-label="Musiqini söndür">
+  <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></svg>
+  <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/><path d="M3 3l18 18"/></svg>
+</button>
+
+<main id="main">
+  <section id="hero">
+    <div class="hero-card reveal">
+      <p class="hero-lead">Sevgi ilə dəvət edirik</p>
+      <h1 class="names">Kənan<span class="amp">&amp;</span>Arzu</h1>
+      <svg class="rule" viewBox="0 0 120 14" aria-hidden="true"><path d="M0 7h46M74 7h46" stroke="currentColor" stroke-width="1"/><path d="M60 2l5 5-5 5-5-5z" fill="currentColor"/></svg>
+      <p class="hero-note">Həyatımızın ən xoşbəxt gününü sizinlə bölüşmək istəyirik</p>
+    </div>
+    <div class="scroll-cue" aria-hidden="true">Aşağı
+      <svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    </div>
+  </section>
+
+  <section id="date" class="lace-bg">
+    <div class="wrap">
+      <p class="eyebrow reveal">Toy günümüz</p>
+      <h2 class="reveal">Tariximiz</h2>
+      <div class="date-box" id="dateBox">
+        <div class="date-hidden" aria-live="polite">
+          <div class="cal" aria-label="Dekabr 2026 təqvimi">
+            <div class="cal-head">Dekabr <b>2026</b></div>
+            <div class="cal-grid" id="calGrid"></div>
+          </div>
+          <div class="date-day">Şənbə, saat 18:00</div>
+        </div>
+        <button class="bfly" id="bfly" type="button" aria-label="Tarixi göstər"><img src="img/butterfly.png" alt=""></button>
+      </div>
+      <p class="tap">Tarixi görmək üçün kəpənəyə toxunun</p>
+      <div class="countdown idle" id="countdown" aria-label="Toya qalan vaxt">
+        <div class="cd"><b id="cdD">--</b><span>Gün</span></div>
+        <div class="cd"><b id="cdH">--</b><span>Saat</span></div>
+        <div class="cd"><b id="cdM">--</b><span>Dəqiqə</span></div>
+        <div class="cd"><b id="cdS">--</b><span>Saniyə</span></div>
+      </div>
+      <img class="tassels" src="img/tassels.png" alt="">
+    </div>
+  </section>
+
+  <section id="venue" class="lace-bg">
+    <div class="wrap">
+      <p class="eyebrow reveal">Məkan</p>
+      <h2 class="reveal">Sizi gözləyirik</h2>
+      <p class="venue-name reveal">Sarı Gəlin Şadlıq Sarayı</p>
+      <p class="venue-sub reveal">Bakı</p>
+      <div class="btns reveal">
+        <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Sar%C4%B1+G%C9%99lin+%C5%9Eadl%C4%B1q+Saray%C4%B1+Bak%C4%B1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Xəritə</a>
+        <a class="btn" target="_blank" rel="noopener" href="https://waze.com/ul?q=Sar%C4%B1%20G%C9%99lin%20%C5%9Eadl%C4%B1q%20Saray%C4%B1%20Bak%C4%B1&amp;navigate=yes">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 14.5c-1-1-1.5-2.5-1.5-4A8.5 8.5 0 0 1 11 2h1a9 9 0 0 1 9 9 8.5 8.5 0 0 1-8.5 8.5H10"/><circle cx="7.5" cy="19" r="2"/><circle cx="15.5" cy="19.5" r="1.6"/><path d="M9 9.5h.01M14 9.5h.01M9.5 13a3.5 3.5 0 0 0 5 0"/></svg>Waze</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="program">
+    <div class="wrap">
+      <p class="eyebrow reveal">12 dekabr</p>
+      <h2 class="reveal">Günün proqramı</h2>
+      <div class="timeline" id="timeline">
+        <img class="wave" id="wave" src="img/wave.webp" alt="">
+        <svg class="wave-svg" viewBox="0 0 1024 1536" aria-hidden="true">
+          <path id="wBase" d="M500.0 -12.0 C511.7 -5.8 546.7 10.5 570.0 25.0 C593.3 39.5 625.7 56.7 640.0 75.0 C654.3 93.3 658.5 115.8 656.0 135.0 C653.5 154.2 641.0 174.5 625.0 190.0 C609.0 205.5 585.8 216.0 560.0 228.0 C534.2 240.0 499.2 248.3 470.0 262.0 C440.8 275.7 405.7 291.2 385.0 310.0 C364.3 328.8 348.2 353.7 346.0 375.0 C343.8 396.3 356.3 420.2 372.0 438.0 C387.7 455.8 412.0 468.0 440.0 482.0 C468.0 496.0 508.3 507.3 540.0 522.0 C571.7 536.7 608.0 552.8 630.0 570.0 C652.0 587.2 668.7 605.8 672.0 625.0 C675.3 644.2 663.7 669.5 650.0 685.0 C636.3 700.5 618.3 704.2 590.0 718.0 C561.7 731.8 511.7 750.7 480.0 768.0 C448.3 785.3 419.7 803.3 400.0 822.0 C380.3 840.7 365.3 862.8 362.0 880.0 C358.7 897.2 371.5 912.5 380.0 925.0 C388.5 937.5 401.3 942.5 413.0 955.0 C424.7 967.5 428.8 986.7 450.0 1000.0 C471.2 1013.3 511.7 1023.3 540.0 1035.0 C568.3 1046.7 598.7 1055.8 620.0 1070.0 C641.3 1084.2 661.0 1104.2 668.0 1120.0 C675.0 1135.8 671.7 1150.8 662.0 1165.0 C652.3 1179.2 633.7 1191.7 610.0 1205.0 C586.3 1218.3 548.3 1232.5 520.0 1245.0 C491.7 1257.5 462.5 1266.7 440.0 1280.0 C417.5 1293.3 395.8 1307.5 385.0 1325.0 C374.2 1342.5 371.7 1366.2 375.0 1385.0 C378.3 1403.8 389.5 1423.2 405.0 1438.0 C420.5 1452.8 449.2 1462.8 468.0 1474.0 C486.8 1485.2 506.8 1494.0 518.0 1505.0 C529.2 1516.0 532.2 1534.2 535.0 1540.0" fill="none" stroke="#7b1a2b" stroke-width="3.4" stroke-dasharray="13 11" stroke-linecap="round"/>
+          <g id="wDone"></g>
+          <image id="wHeart" href="img/wave-heart.webp" x="-70" y="-64" width="140" height="128"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section id="rsvp" class="lace-bg">
+    <img class="rsvp-top" src="img/rsvp-top.webp" alt="">
+    <div class="wrap">
+      <p class="eyebrow reveal">RSVP</p>
+      <h2 class="reveal">Ürək sözləriniz</h2>
+      <p class="reveal" style="max-width:32ch">İştirakınızı təsdiqləyin və bizə xoş arzularınızı yazın</p>
+      <form id="rsvpForm" novalidate>
+        <div class="field"><label for="rName">Adınız və soyadınız</label><input type="text" id="rName" autocomplete="name" placeholder="Məs.: Leyla Məmmədova"></div>
+        <div class="field"><span class="lbl">İştirak</span>
+          <div class="choice">
+            <input type="radio" name="att" id="attYes" value="yes" checked><label for="attYes">Gələcəyəm</label>
+            <input type="radio" name="att" id="attNo" value="no"><label for="attNo">Gələ bilməyəcəyəm</label>
+          </div>
+        </div>
+        <div class="field" id="countWrap"><label for="rCount">Neçə nəfər</label>
+          <select id="rCount"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+        </div>
+        <div class="field"><label for="rWish">Ürək sözləriniz</label><textarea id="rWish" placeholder="Kənan və Arzuya arzularınız…"></textarea></div>
+        <p class="err" id="rErr"></p>
+        <a class="btn solid" id="rSend" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>WhatsApp ilə göndər</a>
+      </form>
+    </div>
+  </section>
+
+  <section id="finale">
+    <div class="wrap">
+      <h2 class="reveal">Sizi gözləyirik</h2>
+      <p class="reveal">Sevincimizə ortaq olacağınız üçün sizə ürəkdən minnətdarıq. O gecə aranızda olmaq, sizinlə birlikdə gülmək və bu günü əbədi xatirəyə çevirmək bizim üçün ən gözəl hədiyyədir.</p>
+      <div class="sign reveal">Kənan &amp; Arzu</div>
+      <a class="insta" href="https://www.instagram.com/devetify?vrfl=MTlnbnp5NzNzdHkweA==" target="_blank" rel="noopener" aria-label="Devetify Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <p class="foot">Devetify</p>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+  /* WhatsApp nömrəsi (ölkə kodu ilə, boşluqsuz), məs: "994501234567". Boş qalarsa, qonaq kontaktı özü seçir. */
+  var WA_NUMBER = "";
+  var EVENT = new Date("2026-12-12T18:00:00+04:00").getTime();
+
+  document.documentElement.classList.add('js');
+  var body=document.body, intro=document.getElementById('intro'), stage=document.getElementById('stage'), main=document.getElementById('main');
+  body.classList.add('locked');
+  var opened=false;
+  function sizeStage(){stage.style.setProperty('--u',(stage.clientWidth/100)+'px')}
+  sizeStage(); window.addEventListener('resize',sizeStage);
+  var bgm=document.getElementById('bgm'), musicBtn=document.getElementById('musicBtn'), wantMusic=true;
+  function setMusicUi(){musicBtn.classList.toggle('muted',bgm.paused);musicBtn.setAttribute('aria-label',bgm.paused?'Musiqini yandır':'Musiqini söndür')}
+  function startMusic(){
+    try{bgm.volume=0.75;var pr=bgm.play(); if(pr&&pr.catch) pr.catch(function(){}); }catch(e){}
+    musicBtn.classList.add('show'); setTimeout(setMusicUi,300);
+  }
+  musicBtn.addEventListener('click',function(){
+    if(bgm.paused){wantMusic=true;var pr=bgm.play();if(pr&&pr.catch)pr.catch(function(){})} else {wantMusic=false;bgm.pause()}
+    setMusicUi();
+  });
+  bgm.addEventListener('play',setMusicUi); bgm.addEventListener('pause',setMusicUi);
+  document.addEventListener('visibilitychange',function(){
+    if(document.hidden){bgm.pause()} else if(opened&&wantMusic){var pr=bgm.play();if(pr&&pr.catch)pr.catch(function(){})}
+  });
+  function openEnvelope(){
+    if(opened) return; opened=true;
+    stage.classList.remove('closed'); stage.classList.add('opening');
+    startMusic();
+    setTimeout(function(){stage.classList.add('opened')},1000);
+    setTimeout(function(){stage.classList.add('rise')},1150);
+    setTimeout(function(){stage.classList.add('grow')},3000);
+    setTimeout(function(){intro.classList.add('gone');main.classList.add('show');body.classList.remove('locked');window.scrollTo(0,0);revealCheck()},3850);
+    setTimeout(function(){intro.hidden=true},4800);
+  }
+  intro.addEventListener('click',openEnvelope);
+  intro.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openEnvelope()}});
+
+  /* scroll reveal (visible by default; only pre-hide elements below the fold) */
+  var reveals=[].slice.call(document.querySelectorAll('.reveal'));
+  reveals.forEach(function(el){ if(el.getBoundingClientRect().top>window.innerHeight) el.classList.add('pre') });
+  function revealCheck(){
+    var h=window.innerHeight;
+    reveals.forEach(function(el){ if(el.classList.contains('pre') && el.getBoundingClientRect().top<h*0.9) el.classList.remove('pre') });
+  }
+
+  /* December 2026 calendar, Monday first; the 12th (Saturday) carries the heart */
+  (function(){
+    var g=document.getElementById('calGrid'); if(!g) return;
+    var dows=['B.e','Ç.a','Ç','C.a','C','Ş','B'];
+    dows.forEach(function(t){var e=document.createElement('span');e.className='dow';e.textContent=t;g.appendChild(e)});
+    var first=(new Date(2026,11,1).getDay()+6)%7;
+    for(var i=0;i<first;i++){g.appendChild(document.createElement('span'))}
+    for(var d=1;d<=31;d++){var e=document.createElement('span');e.className='d'+(d===12?' on':'');e.textContent=d;g.appendChild(e)}
+  })();
+
+  /* butterfly date reveal + countdown */
+  var bfly=document.getElementById('bfly'), dateBox=document.getElementById('dateBox'), cdBox=document.getElementById('countdown');
+  var cd={d:document.getElementById('cdD'),h:document.getElementById('cdH'),m:document.getElementById('cdM'),s:document.getElementById('cdS')};
+  function pad(n){return n<10?'0'+n:''+n}
+  function tick(){
+    var t=Math.max(0,EVENT-Date.now());
+    var d=Math.floor(t/864e5),h=Math.floor(t%864e5/36e5),m=Math.floor(t%36e5/6e4),s=Math.floor(t%6e4/1e3);
+    cd.d.textContent=d;cd.h.textContent=pad(h);cd.m.textContent=pad(m);cd.s.textContent=pad(s);
+  }
+  var released=false;
+  bfly.addEventListener('click',function(){
+    if(released) return; released=true;
+    var br=bfly.getBoundingClientRect();
+    bfly.classList.add('away'); dateBox.classList.add('open');
+    setTimeout(function(){cdBox.classList.remove('idle');tick();setInterval(tick,1000)},900);
+    releaseButterflies(br.left+br.width/2,br.top+br.height/2);
+  });
+
+  /* four butterflies: each leaves in its own direction; two come back and drift along the side edges while scrolling */
+  function releaseButterflies(cx,cy){
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var dirs=[-2.4,-0.75,2.35,0.8], flock=[];
+    for(var i=0;i<4;i++){
+      var el=document.createElement('div'); el.className='free';
+      var img=document.createElement('img'); img.src='img/butterfly.png'; img.alt='';
+      img.style.animationDelay=(-i*0.09)+'s';
+      el.appendChild(img); body.appendChild(el);
+      var size=42+Math.random()*14; el.style.width=size+'px';
+      flock.push({el:el,x:cx-size/2,y:cy-size/2,px:cx,py:cy,size:size,a:dirs[i]+(Math.random()-.5)*.3,v:1.1,ph:Math.random()*10,ph0:Math.random()*6.28,mode:'out',keep:i>=2,side:i===2?-1:1,wait:0,face:1,tilt:0});
+    }
+    var last=performance.now();
+    function frame(now){
+      var dt=Math.min(40,now-last)/16.67; last=now;
+      var W=window.innerWidth,H=window.innerHeight,alive=0;
+      flock.forEach(function(b){
+        if(b.dead) return; alive++;
+        b.ph+=0.02*dt;
+        var ox=b.x,oy=b.y;
+        if(b.mode==='out'){
+          b.v=Math.min(4.4,b.v+0.05*dt);
+          b.a+=Math.sin(b.ph*3)*0.02*dt;
+          b.x+=Math.cos(b.a)*b.v*dt; b.y+=Math.sin(b.a)*b.v*dt+Math.sin(b.ph*5)*0.4*dt;
+          if(b.x<-100||b.x>W+100||b.y<-100||b.y>H+100){
+            if(b.keep){b.mode='wait';b.wait=now+900+Math.random()*700;b.el.style.visibility='hidden'}
+            else{b.dead=true;b.el.remove();return}
+          }
+        }else if(b.mode==='wait'){
+          if(now>b.wait){b.mode='in';b.x=b.side<0?-80:W+80;b.y=H*(0.3+Math.random()*0.35);ox=b.x;oy=b.y;b.el.style.visibility='visible'}
+          else return;
+        }else{
+          var tx=b.side<0?(W*0.045+12*Math.sin(now*0.0011+b.ph0)):(W*0.955-b.size-12*Math.sin(now*0.0011+b.ph0));
+          var ty=H*(0.5+0.3*Math.sin(now*0.00031+b.ph0*2));
+          b.x+=(tx-b.x)*0.03*dt; b.y+=(ty-b.y)*0.03*dt+Math.sin(b.ph*4)*0.25*dt;
+        }
+        var vx=b.x-ox,vy=b.y-oy;
+        if(Math.abs(vx)>0.05) b.face=vx<0?1:-1;
+        b.tilt+=((Math.max(-25,Math.min(25,vy*5)))-b.tilt)*0.1;
+        b.el.style.transform='translate('+b.x+'px,'+b.y+'px) scaleX('+b.face+') rotate('+(b.tilt*b.face)+'deg)';
+      });
+      if(alive) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  /* program along the wave picture: y = position on the 1024x1536 artwork */
+  var program=[
+    ['18:00','Qonaqların qarşılanması',170,'L',540],
+    ['19:00','Bəy və gəlinin gəlişi',395,'R',450],
+    ['20:00','Canlı musiqi',640,'L',585],
+    ['22:00','Tortun kəsilməsi',845,'R',475],
+    ['23:00','DJ ilə əyləncə',1130,'L',590],
+    ['00:00','Gecənin sonu',1350,'R',450]
+  ];
+  var tl=document.getElementById('timeline');
+  var base=document.getElementById('wBase'), heart=document.getElementById('wHeart'), done=document.getElementById('wDone');
+  var Lw=base.getTotalLength(), trail=[];
+  [['#fff7ee',22,.7],['#6f1122',11,1],['#c4495c',3,.7]].forEach(function(c){
+    var q=document.createElementNS('http://www.w3.org/2000/svg','path');
+    q.setAttribute('d',base.getAttribute('d')); q.setAttribute('fill','none'); q.setAttribute('stroke',c[0]);
+    q.setAttribute('stroke-width',c[1]); q.setAttribute('opacity',c[2]); q.setAttribute('stroke-linecap','round');
+    q.style.strokeDasharray=Lw+' '+Lw; q.style.strokeDashoffset=Lw; done.appendChild(q); trail.push(q);
+  });
+  var items=program.map(function(p){
+    var el=document.createElement('div'); el.className='tl-item '+(p[3]==='L'?'tl-left':'tl-right');
+    el.style.top=(p[2]/1536*100)+'%';
+    if(p[3]==='L'){el.style.left='0';el.style.right=(100-p[4]/1024*100)+'%'} else {el.style.left=(p[4]/1024*100)+'%';el.style.right='0'}
+    el.innerHTML='<b>'+p[0]+'</b><span>'+p[1]+'</span>';
+    tl.appendChild(el); return {el:el,y:p[2]};
+  });
+  var cur=0,target=0;
+  function progress(){
+    var r=tl.getBoundingClientRect(), h=window.innerHeight;
+    target=Math.max(0,Math.min(1,(h*0.7-r.top)/(r.height*0.92)));
+  }
+  function anim(){
+    cur+=(target-cur)*0.08;
+    var len=cur*Lw, pt=base.getPointAtLength(len);
+    heart.setAttribute('transform','translate('+pt.x+' '+pt.y+')');
+    trail.forEach(function(q){q.style.strokeDashoffset=Lw-len});
+    items.forEach(function(it){ it.el.classList.toggle('on', pt.y>=it.y-50) });
+    requestAnimationFrame(anim);
+  }
+  requestAnimationFrame(anim);
+  window.addEventListener('scroll',function(){progress();revealCheck()},{passive:true});
+  window.addEventListener('resize',progress);
+  progress();
+
+  /* RSVP → WhatsApp */
+  var f={name:document.getElementById('rName'),count:document.getElementById('rCount'),wish:document.getElementById('rWish'),yes:document.getElementById('attYes'),no:document.getElementById('attNo')};
+  var send=document.getElementById('rSend'), err=document.getElementById('rErr'), countWrap=document.getElementById('countWrap');
+  function compose(){
+    countWrap.hidden=f.no.checked;
+    var lines=['Kənan & Arzunun toyu (12.12.2026)','Ad: '+(f.name.value.trim()||'-')];
+    lines.push(f.yes.checked?'İştirak: Gələcəyəm ('+f.count.value+' nəfər)':'İştirak: Gələ bilməyəcəyəm');
+    if(f.wish.value.trim()) lines.push('Ürək sözləri: '+f.wish.value.trim());
+    var txt=encodeURIComponent(lines.join('\n'));
+    send.href=WA_NUMBER?('https://wa.me/'+WA_NUMBER+'?text='+txt):('https://wa.me/?text='+txt);
+  }
+  ['input','change'].forEach(function(ev){document.getElementById('rsvpForm').addEventListener(ev,function(){err.textContent='';compose()})});
+  document.getElementById('rsvpForm').addEventListener('submit',function(e){e.preventDefault()});
+  send.addEventListener('click',function(e){
+    if(!f.name.value.trim()){e.preventDefault();err.textContent='Zəhmət olmasa adınızı yazın.';f.name.focus()}
+  });
+  compose();
+})();
+</script>
+</body>
+</html>
